@@ -1,2 +1,1 @@
-# taco-night
-Module 5 Challenge, Third-Party APIs Challenge: Work Day Scheduler
+# Work Day Scheduler Starter Code
