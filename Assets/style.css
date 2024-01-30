@@ -1,9 +1,9 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  background: linear-gradient(to right, lightpink, lightblue, lightgreen); 
+  background: linear-gradient(to right, lightpink, lightblue, lightgreen); /*changes color of background*/
   background-size: 200% 100%;
-  animation: gradientAnimation 5s infinite alternate;
+  animation: gradientAnimation 3s infinite alternate;
   font-family: 'Bubblegum Sans', cursive; 
   background-color: #87CEEB; 
   padding: 20px;
