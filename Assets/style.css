@@ -1,11 +1,11 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  background: linear-gradient(to right, lightpink, lightblue); /* Replace with your preferred color codes */
+  background: linear-gradient(to right, lightpink, lightblue); 
   background-size: 200% 100%;
   animation: gradientAnimation 5s infinite alternate;
-  font-family: 'Bubblegum Sans', cursive; /* Replace with the font name you've chosen */
-  background-color: #87CEEB; /* Set a background color for the bubbles */
+  font-family: 'Bubblegum Sans', cursive; 
+  background-color: #87CEEB; 
   padding: 20px;
 }
   
