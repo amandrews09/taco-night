@@ -1,43 +1,54 @@
-
-var now = moment(); // current date and time
-    console.log(now.format('YYYY-MM-DD HH:mm:ss')); // format and print the date
-
-   
-  
 $(document).ready(function () {
 
-
   // Get the current hour
-var currentHour = new Date().getHours();
+  var currentHour = new Date().getHours();
 
-// Loop through each time-block div
-document.querySelectorAll('.time-block').forEach(function(timeBlock) {
-  // Get the hour from the id
-  var hour = parseInt(timeBlock.id.split('-')[1]);
+  // Loop through each time-block div
+  document.querySelectorAll('.time-block').forEach(function(timeBlock) {
+    // Get the hour from the id
+    var hour = parseInt(timeBlock.id.split('-')[1]);
 
-  // Compare the hour with the current hour
-  if (hour < currentHour) {
-    timeBlock.classList.add('past');
-    timeBlock.classList.remove('present', 'future');
-  } else if (hour === currentHour) {
-    timeBlock.classList.add('present');
-    timeBlock.classList.remove('past', 'future');
-  } else {
-    timeBlock.classList.add('future');
-    timeBlock.classList.remove('past', 'present');
-  }
-});
+    // Compare the hour with the current hour
+    if (hour < currentHour) {
+      timeBlock.classList.add('past');
+      timeBlock.classList.remove('present', 'future');
+    } else if (hour === currentHour) {
+      timeBlock.classList.add('present');
+      timeBlock.classList.remove('past', 'future');
+    } else {
+      timeBlock.classList.add('future');
+      timeBlock.classList.remove('past', 'present');
+    }
+  });
 
+  // Add click event listener for save buttons
+  $('.saveBtn').on('click', function() {
+    // Get the corresponding textarea and its value
+    var textarea = $(this).siblings('.description');
+    var textValue = textarea.val();
 
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+    // Get the id of the parent time-block div
+    var timeBlockId = $(this).parent().attr('id');
+
+    // Save the user input to localStorage using the timeBlockId as the key
+    localStorage.setItem(timeBlockId, textValue);
+  });
+
+  // Retrieve values from localStorage and set the textarea values accordingly
+  $('.time-block').each(function() {
+    var timeBlockId = $(this).attr('id');
+    var storedValue = localStorage.getItem(timeBlockId);
+
+    // Set the textarea value if there is a stored value
+    if (storedValue !== null) {
+      $(this).find('.description').val(storedValue);
+    }
+  });
+
+  // Display the current date in the header of the page
   function displayCurrentDay() {
     var currentDate = moment().format('dddd MMMM Do, YYYY');
     $("#currentDay").text(currentDate);
-}
-displayCurrentDay();
+  }
+  displayCurrentDay();
 });

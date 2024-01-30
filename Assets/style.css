@@ -8,7 +8,7 @@ textarea {
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  border-left: 1px solid #d0d0d0; /* Light Gray */
   padding: 10px;
 }
 
@@ -21,36 +21,36 @@ textarea {
 }
 
 .row {
-  border-top: 1px solid white;
+  border-top: 1px solid #f0f0f0; /* Lighter Gray */
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  background-color: #fadede; /* Light Pink */
+  color: #5c5c5c; /* Dark Gray */
+  border-top: 1px dashed #5c5c5c; /* Dark Gray */
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-color: #ffd1a6; /* Light Orange */
+  color: #5c5c5c; /* Dark Gray */
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: #c8e6c9; /* Light Green */
+  color: #5c5c5c; /* Dark Gray */
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color: #bad2f3; /* Light Blue */
+  color: #5c5c5c; /* Dark Gray */
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border-left: 1px solid #d0d0d0; /* Light Gray */
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+  background-color: #91a7d0; /* Lighter Blue */
+  color: #ffffff; /* White */
 }
 
 .saveBtn i:hover {
