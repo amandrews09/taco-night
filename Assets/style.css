@@ -1,7 +1,14 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  background: linear-gradient(to right, lightpink, orange); /* Replace with your preferred color codes */
+  background-size: 200% 100%;
+  animation: gradientAnimation 5s infinite alternate;
+  font-family: 'Bubblegum Sans', cursive; /* Replace with the font name you've chosen */
+  background-color: #87CEEB; /* Set a background color for the bubbles */
+  padding: 20px;
 }
+  
 
 textarea {
   background: transparent;
@@ -57,3 +64,19 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+  
+  .bubble-text {
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff; /* Set a background color for the text inside the bubbles */
+    border-radius: 20px; /* Adjust the border-radius to control the bubble shape */
+    font-family: Arial, sans-serif; /* Use a fallback font */
+  }
