@@ -8,8 +8,8 @@ Master your day with precision and grace – introducing this Work Day Scheduler
 [linkToDeployedPage](https://amandrews09.github.io/taco-night/)
 
 ## Usage
-[Screenshot](./Assets/WorkDayScheduler.mp4)
-
+[mp4](./Assets/WorkDayScheduler.mp4)
+[gif](./Assets/WDS.gif)
 
 ## Credits
 
